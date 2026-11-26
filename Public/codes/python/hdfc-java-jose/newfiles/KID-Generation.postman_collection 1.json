@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "69db5380-e2ae-45c0-8118-4b5e03590121",
+		"name": "KID-Generation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "KidGeneration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"publicKey\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-tryitout-uat.hdfcbank.com/api/joseUtility/KidGenerator",
+					"protocol": "https",
+					"host": [
+						"api-tryitout-uat",
+						"hdfcbank",
+						"com"
+					],
+					"path": [
+						"api",
+						"joseUtility",
+						"KidGenerator"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

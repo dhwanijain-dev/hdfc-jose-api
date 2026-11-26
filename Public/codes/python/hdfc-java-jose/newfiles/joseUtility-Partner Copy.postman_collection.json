@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "17bbda05-d134-43f5-90d0-4e464dc68d65",
+		"name": "joseUtility-Partner Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "KidGeneration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"publicKey\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-tryitout-uat.hdfcbank.com/api/joseUtility/KidGenerator",
+					"protocol": "https",
+					"host": [
+						"api-tryitout-uat",
+						"hdfcbank",
+						"com"
+					],
+					"path": [
+						"api",
+						"joseUtility",
+						"KidGenerator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Public Cert KID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-tryitout-uat.hdfcbank.com/api/joseUtility/KidGeneratorByCert",
+					"protocol": "https",
+					"host": [
+						"api-tryitout-uat",
+						"hdfcbank",
+						"com"
+					],
+					"path": [
+						"api",
+						"joseUtility",
+						"KidGeneratorByCert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JwsGenerator",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "kid",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "privateKey",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "alg",
+						"value": "RS256",
+						"type": "text"
+					},
+					{
+						"key": "typ",
+						"value": "JWT",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-tryitout-uat.hdfcbank.com/api/joseUtility/JwsGenerator",
+					"protocol": "https",
+					"host": [
+						"api-tryitout-uat",
+						"hdfcbank",
+						"com"
+					],
+					"path": [
+						"api",
+						"joseUtility",
+						"JwsGenerator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unsigned Payload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "kid",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "publicKey",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "alg",
+						"value": "RS256",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "typ",
+						"value": "JWT",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-tryitout-uat.hdfcbank.com/api/joseUtility/UnsignJWS",
+					"protocol": "https",
+					"host": [
+						"api-tryitout-uat",
+						"hdfcbank",
+						"com"
+					],
+					"path": [
+						"api",
+						"joseUtility",
+						"UnsignJWS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JweGenerator",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "kid",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "publicKey",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "alg",
+						"type": "text",
+						"value": "RS256",
+						"disabled": true
+					},
+					{
+						"key": "typ",
+						"type": "text",
+						"value": "JWT",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-tryitout-uat.hdfcbank.com/api/joseUtility/JWEGenerator",
+					"protocol": "https",
+					"host": [
+						"api-tryitout-uat",
+						"hdfcbank",
+						"com"
+					],
+					"path": [
+						"api",
+						"joseUtility",
+						"JWEGenerator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JweDecryption",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					},
+					{
+						"key": "privateKey",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "alg",
+						"type": "text",
+						"value": "RS256",
+						"disabled": true
+					},
+					{
+						"key": "typ",
+						"type": "text",
+						"value": "JWT",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-tryitout-uat.hdfcbank.com/api/joseUtility/JWEDecryption",
+					"protocol": "https",
+					"host": [
+						"api-tryitout-uat",
+						"hdfcbank",
+						"com"
+					],
+					"path": [
+						"api",
+						"joseUtility",
+						"JWEDecryption"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
